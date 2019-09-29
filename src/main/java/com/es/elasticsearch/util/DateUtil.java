@@ -6,6 +6,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * @author sonning
+ */
 public class DateUtil {
     /**
      * java.util.Date => String

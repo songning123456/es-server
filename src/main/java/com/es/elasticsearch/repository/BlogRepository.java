@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * @author sonning
+ */
 @Repository
 public interface BlogRepository extends ElasticsearchRepository<Blog, String> {
 

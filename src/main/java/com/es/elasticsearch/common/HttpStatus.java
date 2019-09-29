@@ -1,5 +1,8 @@
 package com.es.elasticsearch.common;
 
+/**
+ * @author sonning
+ */
 public class HttpStatus {
     /**
      * [GET] 服务器成功返回用户请求的数据，该操作是幂等的

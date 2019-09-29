@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author sonning
+ */
 public class ClassConvertUtil {
     private static final Map<String, Method> map = new HashMap<>();
 

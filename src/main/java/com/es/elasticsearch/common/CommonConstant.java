@@ -1,5 +1,8 @@
 package com.es.elasticsearch.common;
 
+/**
+ * @author sonning
+ */
 public class CommonConstant {
 
     /**

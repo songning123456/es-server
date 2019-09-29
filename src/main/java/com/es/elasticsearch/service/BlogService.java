@@ -5,6 +5,9 @@ import com.es.elasticsearch.dto.CommonDTO;
 import com.es.elasticsearch.vo.BlogVO;
 import com.es.elasticsearch.vo.CommonVO;
 
+/**
+ * @author sonning
+ */
 public interface BlogService {
     /**
      * 新增文章
