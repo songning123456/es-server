@@ -8,4 +8,4 @@ spring:
   data:
     elasticsearch:
       cluster-nodes: localhost:9300
-      cluster-name: elasticsearch
+      cluster-name: es-5.2-test
