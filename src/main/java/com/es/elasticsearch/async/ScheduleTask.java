@@ -38,6 +38,7 @@ public class ScheduleTask {
 
     private void theftMeituan() throws Exception {
         String url = "https://tech.meituan.com/";
+        List<String> authors = Arrays.asList("吃顿好的", "cest mom seul", "zhou", "重零开始");
         List<String> labels = Arrays.asList("WebSocket", "Vuex", "Chrome", "jQuery", "正则表达式", "HTTP", "MySQL", "ECMAScript 6", "Git", "HTML", "设计模式", "代码规范", "图片资源", "Linux", "机器学习", "Android", "iOS", "Java", "JavaScript");
         String random = RandomUtil.getRandom(2, 18);
         // 爬虫美团
@@ -48,7 +49,7 @@ public class ScheduleTask {
             String title = doc.getElementsByClass("post-title").get(0).getElementsByTag("a").html();
             String readTimes = RandomUtil.getRandom(1, 1000);
             String content = doc.getElementsByClass("post-content").html();
-            String author = "songning";
+            String author = authors.get(Integer.parseInt(RandomUtil.getRandom(0, 3)));
             String kinds = labels.get(Integer.parseInt(RandomUtil.getRandom(0, labels.size() - 1)));
             Date updateTime = DateUtil.getBeforeByCurrentTime(Integer.parseInt(RandomUtil.getRandom(1, 23)));
             final String[] summary = new String[1];
@@ -64,6 +65,7 @@ public class ScheduleTask {
 
     private void theftBoke() throws Exception {
         String url = "https://www.boke.la/wenzhang/";
+        List<String> authors = Arrays.asList("吃顿好的", "cest mom seul", "zhou", "重零开始");
         List<String> labels = Arrays.asList("WebSocket", "Vuex", "Chrome", "jQuery", "正则表达式", "HTTP", "MySQL", "ECMAScript 6", "Git", "HTML", "设计模式", "代码规范", "图片资源", "Linux", "机器学习", "Android", "iOS", "Java", "JavaScript");
         String random = RandomUtil.getRandom(2, 35);
         Document document = Jsoup.connect(url + random + "/").get();
@@ -80,7 +82,7 @@ public class ScheduleTask {
                 }
             });
             String content = doc.getElementsByClass("zhengwen").get(0).getElementsByTag("p").html();
-            String author = "songning";
+            String author = authors.get(Integer.parseInt(RandomUtil.getRandom(0, 3)));
             Date updateTime = DateUtil.getBeforeByCurrentTime(Integer.parseInt(RandomUtil.getRandom(1, 12)));
             Blog blog = Blog.builder().title(title).summary(summary[0]).content(content).readTimes(Integer.parseInt(readTimes)).kinds(kinds).author(author).updateTime(updateTime).build();
             blogRepository.save(blog);
